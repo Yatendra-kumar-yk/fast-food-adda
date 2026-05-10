@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Fast Food Adda is a modern demo food ordering website with responsive UI, menu search, cart functionality, and admin dashboard demo." />
+    <link rel="icon" href="favicon.ico" />
+    <title>Fast Food Adda | Premium Food Delivery Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a6dfd577e0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="container header-inner">
+                <a class="brand" href="index.html#home">
+                    <span class="brand-mark"><img src="./images/logo-food.png" alt="Logo"></span>
+
+                </a>
+                <nav class="nav-links" id="desktopMenu">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#menu">Menu</a>
+                    <a href="index.html#order">Order</a>
+                    <a href="index.html#upi">UPI Pay</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="admin.html" id="headerLoginLink">Login</a>
+                    <button class="btn btn-cart nav-cart" type="button" id="cartButton">
+                        <img src="./images/icons/cart.svg" alt="cart"> <span id="cartCount">0</span>
+                    </button>
+                </nav>
+                <button class="menu-toggle" id="mobileToggle" aria-label="Open menu">
+                    <span class="hamburger-icon">☰</span>
+                </button>
+            </div>
+        </header>
+
+        <aside class="mobile-menu" id="mobileMenu">
+            <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+                ×
+            </button>
+            <nav class="mobile-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#menu">Menu</a>
+                <a href="index.html#order">Order</a>
+                <a href="index.html#upi">UPI Pay</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="admin.html" id="headerLoginLink">Login</a>
+                <button class="btn btn-cart" type="button" id="cartButtonMobile">
+                    <img src="./images/icons/cart.svg" alt="cart"> Cart (<span id="cartCountMobile">0</span>)
+                </button>
+            </nav>
+        </aside>
+
+        <main>
+            <section class="hero-section" id="home">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <span class="hero-badge">Best Quality</span>
+                        <h1>Delicious Food <span>Just for You!</span></h1>
+                        <p>
+                            Fresh ingredients, tasty recipes and made with love. Order your favorite fast food now and
+                            enjoy
+                            quick delivery.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#order">Order Now</a>
+                            <a class="btn btn-secondary" href="#menu">View Menu</a>
+                        </div>
+                        <div class="hero-highlights">
+                            <div>
+                                <img src="./images/icons/truck.svg" alt="Fast Delivery">
+                                <div class="hero-fast">
+                                    <p>Fast Delivery</p>
+                                    <p><b>On time, every time</b></p>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="./images/icons/quality.svg" alt="Best Quality">
+                                <div class="hero-fast">
+                                    <p>Best Quality</p>
+                                    <p><b>Fresh & tasty food</b></p>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="./images/icons/package.svg" alt="Safe Packaging">
+                                <div class="hero-fast">
+                                    <p>Safe Packaging</p>
+                                    <p><b>Hygienic & secure</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="discount-pill">
+                            <span>Discount</span>
+                            <strong>20% OFF</strong>
+                        </div>
+                        <div class="hero-image-wrap">
+                            <img id="heroCarouselImage" src="./images/hero_food_banner.png" alt="Food carousel" />
+
+
+                            <div class="hero-slider-dots">
+                                <button class="active" type="button" data-slide="0" aria-label="Slide 1"></button>
+                                <button type="button" data-slide="1" aria-label="Slide 2"></button>
+                                <button type="button" data-slide="2" aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+                        <div class="hero-card-meta">
+                            <p>Order with UPI payment and get a fast delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section features-section">
+                <div class="container section-header">
+                    <span>Why Choose Us</span>
+                    <h2 class="h-title">Experience premium food ordering with amazing speed</h2>
+                </div>
+                <div class="container features-grid">
+                    <div class="feature-card">
+                        <img src="./images/icons/truck.svg" alt="Fast Delivery">
+                        <h3>Fast Delivery</h3>
+                        <p>Hot meals delivered quickly to your door with real-time updates.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="./images/icons/quality.svg" alt="Best Quality">
+                        <h3>Best Quality</h3>
+                        <p>Fresh ingredients and handcrafted meals made by expert chefs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="./images/icons/package.svg" alt="Safe Packaging">
+                        <h3>Safe Packaging</h3>
+                        <p>Food packaged carefully to preserve flavor and freshness.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section menu-section" id="menu">
+                <div class="container section-header">
+                    <span>Our Menu</span>
+                    <h2>Something delicious for everyone</h2>
+                </div>
+                <div class="container menu-controls">
+                    <div class="filters" id="categoryFilters"></div>
+                    <div class="search-wrap">
+                        <i class="fas fa-search"></i>
+                        <input id="searchInput" type="text" placeholder="Search food" />
+                    </div>
+                </div>
+                <div class="container menu-grid" id="menuGrid"></div>
+            </section>
+
+            <section class="section order-section" id="order">
+                <div class="container section-header">
+                    <span>Place Your Order</span>
+                    <h2>Choose the best way to order your meal</h2>
+                </div>
+                <div class="container order-grid">
+                    <div class="order-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Call to Order</h3>
+                        <p>Speak to our team and order your favorite food directly.</p>
+                        <img src="./images/icons/phone.svg" alt="Phone"
+                            style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                        <a href="tel:+918218194088">+91 821-819-4088</a>
+                    </div>
+                    <div class="order-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp Order</h3>
+                        <p>Message us on WhatsApp for quick order support.</p>
+                        <img src="./images/icons/whatsapp.svg" alt="WhatsApp"
+                            style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                        <a href="https://wa.me/918218194088" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+                    </div>
+                    <div class="order-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Self Pickup</h3>
+                        <p>Order online and collect from our store when it's ready.</p>
+                        <img src="./images/icons/shopping_bag.svg" alt="Pickup"
+                            style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                        <span>Pickup available 10:00 AM - 11:00 PM</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section upi-section">
+                <div class="container upi-grid">
+                    <div class="upi-copy">
+                        <span>Pay with UPI</span>
+                        <h2>Secure your payment with a fast QR scan.</h2>
+                        <p>
+                            Use the demo UPI ID below and complete a fake payment flow for your order. This is a
+                            portfolio-ready checkout experience.
+                        </p>
+                        <div class="upi-card">
+                            <strong>UPI ID:</strong>
+                            <span>fastfoodadda@upi</span>
+                        </div>
+                    </div>
+                    <div class="upi-image-card">
+                        <img src="images/upi_qr.png" alt="UPI QR Code" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="section contact-section" id="contact">
+                <div class="container section-header">
+                    <span>Contact Us</span>
+                    <h2>We are ready to serve your cravings.</h2>
+                </div>
+                <div class="container contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <div class="cnt">
+                            <img src="./images/icons/phone.svg" alt="Phone"
+                                style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                            <p>+91 821-819-4088</p>
+                        </div>
+
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <div class="cnt">
+                            <img src="./images/icons/email.svg" alt="Email"
+                                style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                            <p>fastfoodadda@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <div class="cnt">
+                            <img src="./images/icons/location.svg" alt="Address"
+                                style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                            <p>Rajpur road, Dehradun, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Opening Hours</h3>
+                        <div class="cnt">
+                            <img src="./images/icons/clock.svg" alt="Opening Hours"
+                                style="width: 24px; vertical-align: middle; margin-right: 8px;">
+                            <p>Mon - Sun: 10:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-section">
+            <div class="container footer-inner">
+                <div>
+                    <p class="footer-brand">Fast Food Adda</p>
+                    <p>© 2026 Fast Food Adda. All Rights Reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> <img
+                            src="./images/icons/facebook.svg" alt="Facebook"
+                            style="width: 24px; vertical-align: middle;"></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> <img
+                            src="./images/icons/instagram.svg" alt="Instagram"
+                            style="width: 24px; vertical-align: middle;"></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> <img
+                            src="./images/icons/whatsapp.svg" alt="Twitter"
+                            style="width: 24px; vertical-align: middle;"></a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <div>
+                    <h3>Your Cart</h3>
+                    <span id="cartItemsCount">0 items</span>
+                </div>
+                <button class="cart-close" id="cartClose" aria-label="Close cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-body" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">₹0</strong>
+                </div>
+                <button class="btn btn-primary btn-full" id="checkoutButton">Checkout</button>
+                <button class="btn btn-secondary btn-full" id="clearCartButton">Clear Cart</button>
+            </div>
+        </div>
+
+        <div class="toast-container" id="toast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
